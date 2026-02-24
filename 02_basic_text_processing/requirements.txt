@@ -1,3 +1,0 @@
-streamlit
-tiktoken
-plotly
