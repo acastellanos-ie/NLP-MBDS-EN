@@ -1,15 +1,8 @@
-# Colab already provides ipython and torch. Installing them again can break
-# Colab's preconfigured runtime packages such as torchvision and torchaudio.
-langchain-core
-langchain-google-genai
-matplotlib
-numpy<2.1
 pandas==2.2.2
-nltk
-scikit-learn
-datasets
-evaluate
-transformers
-accelerate
-seaborn
-tqdm
+scikit-learn==1.7.1
+matplotlib==3.10.5
+seaborn==0.13.2
+torch==2.7.1
+transformers==4.55.4
+sentencepiece==0.2.0
+openai>=1.66.0,<3.0.0

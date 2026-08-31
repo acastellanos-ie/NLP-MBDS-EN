@@ -1,17 +1,33 @@
 # Natural Language Processing
-Repository for the Natural Language Processing class
 
-In this repository you will find all the technical materials related to this course (notebooks, scripts, files,...).
+This repository contains the notebooks used in class. They are built as live demonstrations: the code is ready, but the result is revealed, checked and discussed as the notebook runs.
 
-Please read carefully the following instructions to setup the environment needed for the practices
+The notebooks are not a sequence of coding exercises. Each one starts from a concrete question, changes one thing at a time and finishes by testing where the method breaks.
 
-# Using the NLP environment
+## Course map
 
-This section covers the instructions to execute them.
+| Session | Notebook | Main question |
+| --- | --- | --- |
+| Linguistic structure | [Dependency parsing](03_linguistic_structure_and_interpretability/parsing_lab.ipynb) | What does a dependency parser recover, and how stable is the analysis? |
+| Linguistic structure | [Attention](03_linguistic_structure_and_interpretability/attention.ipynb) | What changes inside a transformer when context changes? |
+| Semantics | [Sentence embeddings](04_semantics/semantics_lab.ipynb) | When does semantic similarity help, and what can it fail to distinguish? |
+| Language modelling | [Next-token prediction](05_language_modeling/language_modeling_lab.ipynb) | How do local token probabilities become generated text? |
+| Transfer learning | [Fine-tuning a classifier](06_transfer_learning_and_fine_tuning/practice_solution.ipynb) | Does a fine-tuned transformer beat a strong lexical baseline? |
+| Retrieval | [Sparse and dense retrieval](07_rag/information_retrieval_vsm.ipynb) | How do lexical and semantic retrieval fail differently? |
+| Question answering | [Extractive QA](07_rag/QA_practice_with_HF.ipynb) | What happens when the answer is absent or the context is wrong? |
+| RAG | [RAG step by step](07_rag/RAG_practice_step_by_step.ipynb) | Which part of a RAG answer came from retrieval and which part came from generation? |
+| Agentic AI | [Agent loops and tools](08_agentic_ai/agentic_ai.ipynb) | What turns a model call into a controlled loop with tools? |
 
-As we will cover in class, the most advanced NLP methodologies nowadays are based on Deep Learning models. These models, while providing an impressive performance in many task, have the limitation of their complexity and the computation power they require.
+The three retrieval notebooks are meant to run in that order: retrieval first, then reader behaviour, then the complete RAG pipeline.
 
-In particular, in order to use these models, it is highly recommended to have a GPU at your disposal. As I imagine that most of you do not have one in your compute, my recommendation is to leverage [Google Colab](https://colab.research.google.com/).
+## Running the notebooks
 
-Google Colab provides you an environment in which you can execute Python code and have access to GPUs. If you want to execute any of the notebooks in this repository in Colab, you can just click on the Open in Colab button at the beggining of each notebook
+Each notebook has an **Open in Colab** button at the top and installs its direct dependencies. For the fine-tuning notebook, select a GPU runtime in Colab if one is available; the small model also runs on CPU, but training takes longer.
 
+For a local environment:
+
+    python -m venv .venv
+    python -m pip install -r requirements.txt
+    jupyter lab
+
+The first run downloads the required spaCy or Hugging Face models. Run the setup cells before class if the network connection may be unreliable.
