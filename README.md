@@ -23,11 +23,3 @@ The three retrieval notebooks are meant to run in that order: retrieval first, t
 ## Running the notebooks
 
 Each notebook has an **Open in Colab** button at the top and installs its direct dependencies. For the fine-tuning notebook, select a GPU runtime in Colab if one is available; the small model also runs on CPU, but training takes longer.
-
-For a local environment:
-
-    python -m venv .venv
-    python -m pip install -r requirements.txt
-    jupyter lab
-
-The first run downloads the required spaCy or Hugging Face models. Run the setup cells before class if the network connection may be unreliable.
