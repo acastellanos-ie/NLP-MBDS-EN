@@ -22,4 +22,4 @@ The three retrieval notebooks are meant to run in that order: retrieval first, t
 
 ## Running the notebooks
 
-Each notebook has an **Open in Colab** button at the top and installs its direct dependencies. For the fine-tuning notebook, select a GPU runtime in Colab if one is available; the small model also runs on CPU, but training takes longer.
+Each notebook has an **Open in Colab** button at the top and installs its direct dependencies. For the fine-tuning notebook, select a GPU runtime in Colab. DistilBERT also runs on CPU, but its three training epochs take substantially longer.
