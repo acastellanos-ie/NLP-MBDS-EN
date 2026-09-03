@@ -1,8 +1,0 @@
-pandas==2.2.2
-scikit-learn==1.7.1
-matplotlib==3.10.5
-seaborn==0.13.2
-torch==2.7.1
-transformers==4.55.4
-sentencepiece==0.2.0
-openai>=1.66.0,<3.0.0
