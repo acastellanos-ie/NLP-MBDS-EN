@@ -17,9 +17,14 @@ The notebooks are not a sequence of coding exercises. Each one starts from a con
 | Question answering | [Extractive QA](07_rag/question_answering.ipynb) | What happens when the answer is absent or the context is wrong? |
 | RAG | [RAG step by step](07_rag/rag_step_by_step.ipynb) | Which part of a RAG answer came from retrieval and which part came from generation? |
 | Agentic AI | [Agent loops and tools](08_agentic_ai/agentic_ai.ipynb) | What turns a model call into a controlled loop with tools? |
+| Course synthesis | [One support case, end to end](09_course_synthesis/support_case_end_to_end.ipynb) | How do the individual NLP components become one inspectable system? |
 
 The three retrieval notebooks are meant to run in that order: retrieval first, then reader behaviour, then the complete RAG pipeline.
 
+## Data
+
+The disaster-tweet files used in the transfer-learning practice come from Kaggle's [Natural Language Processing with Disaster Tweets](https://www.kaggle.com/competitions/nlp-getting-started) competition and remain subject to its competition rules.
+
 ## Running the notebooks
 
-Each notebook has an **Open in Colab** button at the top and installs its direct dependencies. For the fine-tuning notebook, select a GPU runtime in Colab. DistilBERT also runs on CPU, but its three training epochs take substantially longer.
+Each notebook has an **Open in Colab** button at the top and installs its direct dependencies. Select a GPU runtime for the fine-tuning, agentic AI and course-synthesis notebooks. DistilBERT fine-tuning also runs on CPU, but its three training epochs take substantially longer; the local Qwen examples require a GPU.
